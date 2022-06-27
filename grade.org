@@ -1,0 +1,65 @@
+#+TITLE: Grade sheet for your assignment
+
+*Warning* Giving you this feedback via github is still experimental. No rights can be derived from this file. The grade provided by the exam office is the official grade. Also this grade is rounded while the file below gives the decimal score.
+
+
+|                           | grade |
+|---------------------------+-------|
+| Research question         |     0 |
+| Motivation                |   0.5 |
+| Method and data           |   1.0 |
+| Preview of the answers    |   0.0 |
+| Main assumptions          |   0.0 |
+| Python code               |   3.0 |
+| Robustness analysis       |   0.0 |
+| Discussion and conclusion |   0.0 |
+|---------------------------+-------|
+| Total                     |   4.5 |
+#+TBLFM: @10$2=vsum(@2$2..@9$2)
+
+* Research question (0.5 points)
+
+- as no section headings are used, it is a bit hard to identify all the points that need to be graded.
+- no clearly formulated research question
+  [-0.5]
+
+* Motivation (0.5 points)
+
+- the topic of innovation is well motivated
+
+* Method and data (1.0 point)
+
+- link to the data is provided
+- data is read from excel files
+- pandas use is basically limited to a =concat= operation
+
+* Preview of the answers (0.5 points)
+
+- no preview
+  [-0.5]
+
+* Main assumptions (0.5 points)
+
+- some assumptions regarding the data are mentioned
+- "we would not have to make any assumptions regarding the causal relationship between our variables, as the aim of this project is to simply use machine learning to predict the values and not to infer a causal relationship": but we still need to be convinced that the variables are relevant at all
+- [-0.5]
+
+* Python code (6 points)
+
+- [9] what do we learn from the regression? signs/significance of variables?
+- "scale the data appropriately to fit into the machine learning methods we are going to attempt, as not doing that will significally impact the result of such methods.": how would it impact results?
+- different models are estimated but no discussion on how these models or their results compare
+- "as machine learning has a relatively larger R-squared than the OLS estimate": but the OLS score is based on all the data; not on a train-test split: not clear we can compare these scores?
+- hardly any methods from the course are used (e.g. simulated data, Bayesian analysis, neural network)
+  [-3]
+
+* Robustness analysis (0.5 points)
+
+- no robustness analysis
+  [-0.5]
+
+* Discussion and conclusion (0.5 points)
+
+- no discussion of what we learn from the models
+- what have we learned about innovation?
+- [-0.5]
