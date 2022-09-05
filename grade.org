@@ -5,61 +5,53 @@
 
 |                           | grade |
 |---------------------------+-------|
-| Research question         |     0 |
+| Research question         |   0.5 |
 | Motivation                |   0.5 |
-| Method and data           |   1.0 |
-| Preview of the answers    |   0.0 |
-| Main assumptions          |   0.0 |
-| Python code               |   3.0 |
-| Robustness analysis       |   0.0 |
-| Discussion and conclusion |   0.0 |
+| Method and data           |   0.5 |
+| Preview of the answers    |   0.5 |
+| Main assumptions          |   0.3 |
+| Python code               |   2.0 |
+| Robustness analysis       |   0.1 |
+| Discussion and conclusion |   0.3 |
 |---------------------------+-------|
-| Total                     |   4.5 |
+| Total                     |   4.7 |
 #+TBLFM: @10$2=vsum(@2$2..@9$2)
 
 * Research question (0.5 points)
-
-- as no section headings are used, it is a bit hard to identify all the points that need to be graded.
-- no clearly formulated research question
-  [-0.5]
+- clear RQ
 
 * Motivation (0.5 points)
-
-- the topic of innovation is well motivated
+- clear motivation
 
 * Method and data (1.0 point)
-
-- link to the data is provided
-- data is read from excel files
-- pandas use is basically limited to a =concat= operation
+- link to data source provided
+- missing justification for substituting missing values by averages, how was threshold for 75% of non-missings chosen?
+- clear method overview missing (as well as motivation for choosing those methods)
+(-0.5)
 
 * Preview of the answers (0.5 points)
-
-- no preview
-  [-0.5]
+- clear preview
 
 * Main assumptions (0.5 points)
-
-- some assumptions regarding the data are mentioned
-- "we would not have to make any assumptions regarding the causal relationship between our variables, as the aim of this project is to simply use machine learning to predict the values and not to infer a causal relationship": but we still need to be convinced that the variables are relevant at all
-- [-0.5]
+- are there any assumptions related to the methods? (-0.2)
 
 * Python code (6 points)
+- OLS: interpretation of results/coefficients missing, what are the "independent variables"?
+- missing justification of the model specifications:
+     - cell [13]: how are layers chosen? activation functions? loss function? optimizers? and what do these do?
+     - cell [14]: how is batch size and number of epochs determined? what does it do? what is early stopping good for? and patience?
+     - cell [15]: "as we see above, the RMSE and the MSE are getting smaller with each epoch" -> then why not even increase the number of epochs? (explanation missing)      
+     - cell [3]: why and how is the data scaled?
+- in general, extremely little explanation (and code)  
+- not enough topics from the class covered (no bayesian, no analysis of causality and treatment effects, no data simulation, limited use of pandas) (-2.0)
 
-- [9] what do we learn from the regression? signs/significance of variables?
-- "scale the data appropriately to fit into the machine learning methods we are going to attempt, as not doing that will significally impact the result of such methods.": how would it impact results?
-- different models are estimated but no discussion on how these models or their results compare
-- "as machine learning has a relatively larger R-squared than the OLS estimate": but the OLS score is based on all the data; not on a train-test split: not clear we can compare these scores?
-- hardly any methods from the course are used (e.g. simulated data, Bayesian analysis, neural network)
-  [-3]
+(-4.0)
 
 * Robustness analysis (0.5 points)
-
-- no robustness analysis
-  [-0.5]
+- introduces code for ridge and lasso, but no interpretation or explanation present (-0.4)
 
 * Discussion and conclusion (0.5 points)
+- "we can infer with certainty" - this is a very strong statement, would be better to provide some quantifiable statement
+(-0.2)  
+  
 
-- no discussion of what we learn from the models
-- what have we learned about innovation?
-- [-0.5]
